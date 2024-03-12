@@ -9,6 +9,8 @@
     flake = false;
   };
 
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
   outputs = { self, flake-utils, devshell, nixpkgs, ... }:
     flake-utils.lib.eachDefaultSystem (system: {
       devShells.default = let
